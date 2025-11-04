@@ -26,4 +26,9 @@ class AdminController extends Controller
 
         return redirect()->back();
     }
+
+    public function view_food() {
+        $data = Food::all();
+        return view('admin.show_food', compact('data'));
+    }
 }

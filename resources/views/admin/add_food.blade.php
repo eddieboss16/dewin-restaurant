@@ -10,7 +10,7 @@
             color: white;
         }
         .div_deg {
-
+            padding: 10px;
         }
     </style>
   </head>
