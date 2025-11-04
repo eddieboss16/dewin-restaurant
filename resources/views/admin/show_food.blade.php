@@ -38,6 +38,7 @@
                             <th>Details</th>
                             <th>Price</th>
                             <th>Image</th>
+                            <th></th>
                         </tr>
                         @foreach ($data as $data)
                          <tr>
@@ -46,6 +47,9 @@
                             <td>{{$data->price}}</td>
                             <td>
                                 <img width="150" src="food_img/{{$data->image}}" alt="">
+                            </td>
+                            <td>
+                                <a class="btn btn-danger" onclick="return confirm('This action is irreversible,Are you sure to delete this ?')" href="{{url('delete_food',$data->id)}}">Delete</a>
                             </td>
                         </tr>   
                         @endforeach
