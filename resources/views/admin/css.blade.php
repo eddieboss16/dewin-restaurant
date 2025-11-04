@@ -1,7 +1,4 @@
-<!DOCTYPE html>
-<html>
-  <head> 
-    <meta charset="utf-8">
+<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Dark Bootstrap Admin </title>
     <meta name="description" content="">
@@ -24,21 +21,3 @@
     <!-- Tweaks for older IEs--><!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-  </head>
-  <body>
-
-    @include('admin.header')
-    
-    @include('admin.sidebar')
-
-    <div class="page-content">
-        <div class="page-header">
-            <div class="container-fluid">
-                @include('admin.body')
-            </div>
-        </div>
-    </div>
-    <!-- JavaScript files-->
-    @include('admin.js')
-  </body>
-</html>
