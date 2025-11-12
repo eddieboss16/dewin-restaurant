@@ -10,10 +10,17 @@
                         <div class="card bg-transparent border my-3 my-md-0">
                             <img height="200" src="food_img/{{$data->image}}" alt="" class="rounded-0 card-img-top mg-responsive">
                             <div class="card-body">
-                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">{{$data->price}}</a></h1>
+                                <h1 class="text-center mb-4"><a href="#" class="badge badge-primary">{{$data->price}} ksh</a></h1>
                                 <h4 class="pt20 pb20">{{$data->title}}</h4>
                                 <p class="text-white">{{$data->detail}}</p>
                             </div>
+
+                            <form action="{{url('add_cart',$data->id)}}" method="post">
+                                @csrf
+                                <input value="1" type="number" min="1" name="qty" required>
+                                <input class="btn btn-info" type="submit" value="Add to Cart">
+                            </form>
+                            <br><br><br>
                         </div>
                     </div>
                     @endforeach
@@ -25,38 +32,7 @@
         </div>
     </div>
 
-    <!-- REVIEWS Section  -->
-    <div id="testmonial" class="container-fluid wow fadeIn bg-dark text-light has-height-lg middle-items">
-        <h2 class="section-title my-5 text-center">REVIEWS</h2>
-        <div class="row mt-3 mb-5">
-            <div class="col-md-4 my-3 my-md-0">
-                <div class="testmonial-card">
-                    <h3 class="testmonial-title">John Doe</h3>
-                    <h6 class="testmonial-subtitle">Web Designer</h6>
-                    <div class="testmonial-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum nobis eligendi, quaerat accusamus ipsum sequi dignissimos consequuntur blanditiis natus. Aperiam!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 my-3 my-md-0">
-                <div class="testmonial-card">
-                    <h3 class="testmonial-title">Steve Thomas</h3>
-                    <h6 class="testmonial-subtitle">UX/UI Designer</h6>
-                    <div class="testmonial-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum minus obcaecati cum eligendi perferendis magni dolorum ipsum magnam, sunt reiciendis natus. Aperiam!</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4 my-3 my-md-0">
-                <div class="testmonial-card">
-                    <h3 class="testmonial-title">Miranda Joy</h3>
-                    <h6 class="testmonial-subtitle">Graphic Designer</h6>
-                    <div class="testmonial-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, nam. Earum nobis eligendi, dignissimos consequuntur blanditiis natus. Aperiam!</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    
     </div>
 
     <!-- CONTACT Section  -->
