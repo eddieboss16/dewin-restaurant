@@ -86,7 +86,13 @@
                 <th>Price</th>
                 <th>Quantity</th>
                 <th>Image</th>
+                <th>Action</th>
             </tr>
+
+            <?php
+            $total_price = 0;
+            ?>
+
             @foreach ($data as $data)
             <tr>
                 <td>{{$data->title}}</td>
@@ -95,10 +101,19 @@
                 <td>
                     <img width="100" src="food_img/{{$data->image}}" alt="">
                 </td>
+                <td>
+                    <a onclick="return confirm('Are you sure to remove this?')" class="btn btn-danger" href="{{url('remove_cart',$data->id)}}">Remove</a>
+                </td>
             </tr>   
-            @endforeach
-            
+
+            <?php
+            $total_price = $total_price + $data->price;
+            ?>
+
+            @endforeach    
         </table>
+        <h3>Total Price for the cart : ksh {{$total_price}}</h3>
+
     </div>
 </body>
 </html>

@@ -61,5 +61,11 @@ class HomeController extends Controller
         $user_id = Auth()->user()->id;
         $data = Cart::where('userid', '=', $user_id)->get();
             return view('home.my_cart',compact('data'));
-        }
+    }
+    public function remove_cart($id) {
+        $data = Cart::find($id);
+        $data->delete();
+
+        return redirect()->back();
+    }
 }
