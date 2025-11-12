@@ -1,4 +1,29 @@
-<!-- Navbar -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	@include('home.css')
+
+    <style>
+        table {
+            margin: 40px;
+            border: 1px solid grey;
+            padding: 40px;
+        }
+        th {
+            padding: 8px;
+            text-align: center;
+            background-color: grey;
+            color: white;
+            font-weight: bold;
+        }
+        td {
+            padding: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    
     <nav class="custom-navbar navbar navbar-expand-lg navbar-dark fixed-top" data-spy="affix" data-offset-top="10">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -52,11 +77,28 @@
             </ul>
         </div>
     </nav>
-    <!-- header -->
-    <header id="home" class="header">
-        <div class="overlay text-white text-center">
-            <h1 class="display-2 font-weight-bold my-3">Food Hut</h1>
-            <h2 class="display-4 mb-5">Always fresh &amp; Delightful</h2>
-            <a class="btn btn-lg btn-primary" href="#gallary">View Our gallary</a>
-        </div>
-    </header>
+    <br><br><br>
+
+    <div id="gallary" class="text-center bg-dark text-light has-height-md middle-items wow fadeIn">
+        <table>
+            <tr>
+                <th>Food Title</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Image</th>
+            </tr>
+            @foreach ($data as $data)
+            <tr>
+                <td>{{$data->title}}</td>
+                <td>ksh {{$data->price}}</td>
+                <td>{{$data->quantity}}</td>
+                <td>
+                    <img width="100" src="food_img/{{$data->image}}" alt="">
+                </td>
+            </tr>   
+            @endforeach
+            
+        </table>
+    </div>
+</body>
+</html>
