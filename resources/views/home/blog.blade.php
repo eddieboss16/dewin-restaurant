@@ -20,7 +20,9 @@
                                 <input value="1" type="number" min="1" name="qty" required>
                                 <input class="btn btn-info" type="submit" value="Add to Cart">
                             </form>
-                            <br><br><br>
+
+                            <br><br><br><br>
+
                         </div>
                     </div>
                     @endforeach
@@ -38,9 +40,6 @@
     <!-- CONTACT Section  -->
     <div id="contact" class="container-fluid bg-dark text-light border-top wow fadeIn">
         <div class="row">
-            <div class="col-md-6 px-0">
-                <div id="map" style="width: 100%; height: 100%; min-height: 400px"></div>
-            </div>
             <div class="col-md-6 px-5 has-height-lg middle-items">
                 <h3>FIND US</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit, laboriosam doloremque odio delectus, sunt magnam laborum impedit molestiae, magni quae ipsum, ullam eos! Alias suscipit impedit et, adipisci illo quam.</p>

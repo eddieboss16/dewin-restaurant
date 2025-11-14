@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Models\Food;
 
+use App\Models\Order;
+
 class AdminController extends Controller
 {
     public function add_food() {
@@ -60,5 +62,30 @@ class AdminController extends Controller
         $data->save();
 
         return redirect('view_food');
+    }
+    public function orders() {
+        $data = Order::all();
+        return view('admin.order',compact('data'));
+    }
+    public function on_the_way($id) {
+        $data = Order::find($id);
+        $data->delivery_status = "On the Way";
+        $data->save();
+
+        return redirect()->back();
+    }
+    public function delivered($id) {
+        $data = Order::find($id);
+        $data->delivery_status = "delivered";
+        $data->save();
+
+        return redirect()->back();
+    }
+    public function canceled($id) {
+        $data = Order::find($id);
+        $data->delivery_status = "canceled";
+        $data->save();
+
+        return redirect()->back();
     }
 }
