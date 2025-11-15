@@ -56,7 +56,7 @@
                     <a class="nav-link" href="#book-table">Book-Table</a>
                 </li>
             </ul>
-            <a class="navbar-brand m-auto" href="#">
+            <a class="navbar-brand m-auto" href="{{url('/')}}">
                 <img src="assets/imgs/logo.svg" class="brand-img" alt="">
                 <span class="brand-txt">Food Hut</span>
             </a>

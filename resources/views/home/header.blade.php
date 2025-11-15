@@ -12,19 +12,19 @@
                     <a class="nav-link" href="#about">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#gallary">Gallary</a>
+                    <a class="nav-link" href="#gallary">Gallery</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#book-table">Book-Table</a>
                 </li>
             </ul>
-            <a class="navbar-brand m-auto" href="#">
+            <a class="navbar-brand m-auto" href="{{url('/')}}">
                 <img src="assets/imgs/logo.svg" class="brand-img" alt="">
                 <span class="brand-txt">Food Hut</span>
             </a>
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="#blog">Blog<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#blog">food<span class="sr-only">(current)</span></a>
                 </li>
 
                 @if (Route::has('login'))
