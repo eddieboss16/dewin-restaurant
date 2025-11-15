@@ -34,7 +34,12 @@ class HomeController extends Controller
                 $data = Food::all();
                 return view('home.index', compact('data'));
             } else {
-                return view('admin.index');
+                $total_user = User::where('usertype','=','user')->count();
+                $total_food = Food::count();
+                $total_order = Order::count();
+                $total_delivered = Order::where('delivery_status','=','Delivered')->count();
+
+                return view('admin.index',compact('total_user','total_food','total_order','total_delivered'));
             }
         }
     }
