@@ -40,6 +40,8 @@ route::get('canceled/{id}', [AdminController::class, 'canceled']);
 
 route::post('/book_table', [HomeController::class,'book_table']);
 
+route::get('/reservations', [AdminController::class,'reservations']);
+
 
 Route::middleware([
     'auth:sanctum',

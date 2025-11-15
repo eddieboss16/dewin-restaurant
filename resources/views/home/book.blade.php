@@ -6,7 +6,7 @@
                 @csrf
             <div class="row mb-5">
                 <div class="col-sm-6 col-md-3 col-xs-12 my-2">
-                    <input type="text" id="booktable" class="form-control form-control-lg custom-form-control" name="phone" placeholder="Phone Number">
+                    <input type="tel" id="booktable" class="form-control form-control-lg custom-form-control" name="phone" placeholder="Phone Number">
                 </div>
                 <div class="col-sm-6 col-md-3 col-xs-12 my-2">
                     <input type="number" id="booktable" class="form-control form-control-lg custom-form-control" name="n_guest" placeholder="NUMBER OF GUESTS" max="20" min="0">
